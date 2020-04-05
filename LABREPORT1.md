@@ -95,7 +95,7 @@ print(e[2, 2:])>>> [3 1]
 print(e[:,2])  >>> [1 1 3]
 print(e[1,3]) >>> 2
 
->>> A. ![IMAGES](IMAGES/index:slicinghand.jpg)
+>>> A. ![IMAGES](IMAGES/index:slicinghand.JPG)
 
 >>Q. Show your code: Now solve the problem from the section Indexing and slicing using numpy and array assignment.
 
