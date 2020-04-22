@@ -123,6 +123,7 @@
 >A.NL = 10 CR=13
 
 ## Challenge 4: Fading Buzzer
+>In this challenge, I familiarized myself more with a buzzer and the pulse width modulation functions. To do this, I first connected the motor to pin 13 and ground, and then for the code I used the ledcSetup, ledcAttachPin and ledcWrite, to buzz the buzzer at full speed, half speed and no speed. 
 
 >Q. Which pin does the code ask you to use for the motor?
 >A. 13
@@ -131,6 +132,7 @@
 >A.digitalWrite can either only be HIGH(full voltage) or LOW(zero voltage). There is no in between for it. 
 
 ## Challenge 5: Gesture Detection
+>In this challenge, I used the accelerometer again but instead of using just the z axis, I got to use all three axes. For this challenge, I had to find the threshholds for each axis. To find the threshold, I used a value that was between the resting value and value when it was tapped. We then made a code function to make sure a tap is being detected and if it is, it will show the current count on the OLED. My serial plotter did not work when my code included all axes and the words so I had to plot each axis one by one.
 
 >Q. What are some different approaches you tried and why? What are some situations where you noticed your detection algorithm did not work well?
 
@@ -153,6 +155,7 @@
 >A. ![IMAGES](LAB2IMAGES/Challenge5.gif)
 
 ## Challenge 6: Read and Write to OLED
+>In this challenge, we wanted to try to be able to type something into the serial monitor and have it displayed on the OLED. To code this we had to use the Serial Read and Serial Available functions. Then I typed in a short message so it could show up on the screen. 
 
 >Q. Video of a message typed into the serial monitor and appearing on the OLED. This video should be shot WITHOUT moving the camera. 
 
@@ -163,6 +166,7 @@
 >A. If you write a really long message, probably a couple words will show up but some characters would be a question mark. The whole thing will not show up because it simply cannot fit onto the tiny OLED screen. There is no space for it. 
 
 ## Challenge 7: Non-blocking Timing Logic
+>In this challenge we learned about non-blocking coding. For this code, we created a function where when a tap is detected, a count will show up on the OLED screen. And another function where if a tap hasn't been detected for three seconds, the count on the OLED screen will go back down to zero. The point of this non-blocking code is that any of these functions cause be executed at any time, there isn't a specific order for it execute. 
 
 >Q. As a thought exercise, how might you implement this using BLOCKING logic?
 >A.Instead of having another if statement after the detectTap function, there should simply be an else statement that executes the run timer as soon as you can't detect a tap anymore. 
@@ -176,6 +180,7 @@
 
 
 ## Challenge 8: State Machine of the Watch
+>In this challenge, I created the state machine for our final challenge to make the Gesture-controlled watch. I had to determine the states needed to complete the challenge and the transistions needed for the code. 
 
 >Q. How many states do you need? Describe in words what each state does and it’s transition logic. Draw the state machine.
 
@@ -183,5 +188,6 @@
 >![IMAGES](LAB2IMAGES/STATES.jpg)
 
 ## Challenge 9: Gesture-Controlled Watch
+>In this challenge, we used what we have from our state machine, and turn it into code.  First I had to set up the buzzer, OLED, and accelerometer on the breadboard. Then I coded the state machine into Arduino. After compiling and uploading, I started tapping the accelerometer and stopped to see the buzzer buzz, and then started tapping again to see the buzzer stop. 
 
 >Q. A video demonstrating tap + timer functionionality on the OLED. Tap the device 10 times and have it count down, have the motor buzz, and then tap to deactivate. Have the motor floating in the air so that when it vibrates, you can see it move. This video should be shot WITHOUT moving the camera.
