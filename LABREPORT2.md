@@ -191,3 +191,8 @@
 >In this challenge, we used what we have from our state machine, and turn it into code.  First I had to set up the buzzer, OLED, and accelerometer on the breadboard. Then I coded the state machine into Arduino. After compiling and uploading, I started tapping the accelerometer and stopped to see the buzzer buzz, and then started tapping again to see the buzzer stop. 
 
 >Q. A video demonstrating tap + timer functionionality on the OLED. Tap the device 10 times and have it count down, have the motor buzz, and then tap to deactivate. Have the motor floating in the air so that when it vibrates, you can see it move. This video should be shot WITHOUT moving the camera.
+
+>A. To be honest, my count only goes up to 8 and then it goes back to zero, and It's probably because of the millis() function. Since the millis() keeps running, it becomes three seconds when my count reaches 8 and it automatically goes to the next state. Also my threshholds for my accelerometer are all over the place so the detection is pretty bad, but I tried my best and it semi works. 
+
+>![IMAGES](LAB2IMAGES/Challenge9.gif)
+
