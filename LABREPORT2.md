@@ -7,6 +7,7 @@
 >Q. What is the frequency of the blink rate in this example? Note that frequency is the inverse of the time it takes for a cycle. A cycle is the time it takes to go HIGH to LOW to HIGH again. Record a video of your ESP32 blinking. 
 
 >A. Frequency = 1/1500ms = 1/1.5s = 0.67Hz
+>A.![IMAGES](LAB2IMAGES/digitalwrite.gif)
 
 > Digital Read
 
