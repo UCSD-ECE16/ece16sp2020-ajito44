@@ -16,11 +16,11 @@ int timer_state = 0;
 
 void setup() {
 // setupLED();
- //setupButton();
+ setupButton();
  setupMessage();
  //Serial.begin(9600);
-   setupMotor();
-  setupADC();
+  // setupMotor();
+  //setupADC();
  
 initDisplay();
 //showMessage("Initializing...", 1, true);
@@ -30,6 +30,7 @@ initDisplay();
 }
 
 void loop() {
+ // addTimer();
 // condition1();
  // condition2();
 //  condition3();
@@ -38,34 +39,55 @@ void loop() {
  // condition6();
  //Lab2_C2();
    // Lab2_C4();
-   readADC();
-   printADC();
+  // readADC();
+  // printADC();
+ //  Lab3();
+   //sendData();
   // Lab2_C5();
   // Lab2_C7();
-   receiveMessage();
-   stateMachineTimer();
+  //Lab3_Challenge5(); 
+  Lab3_Challenge6();
+  // receiveMessage();
+ //  stateMachineTimer();
   //if(Serial.available() > 0){
     
 //int incomingByte = Serial.read();
 //Serial.print("I received: ");
 //Serial.println(incomingByte, DEC);
 
+
+
   }
 
 
-  void Lab2_C5() {
-   if(detectTap()) {
-      addTimerOLED();
-    }
-  }
-void Lab2_C7() {
-  if (detectTap()) {
-    addTimerOLED();
-    time_last_tap = millis();
-    Serial.println(time_last_tap);
-  }
-   else if(time_last_tap > time_tap) {
-    runTimerOLED();
-  }
+ // void Lab2_C5() {
+ //  if(detectTap()) {
+ //     addTimerOLED();
+ //   }
+ // }
+//void Lab2_C7() {
+ // if (detectTap()) {
+ //   addTimerOLED();
+ //   time_last_tap = millis();
+ //   Serial.println(time_last_tap);
+ // }
+  // else if(time_last_tap > time_tap) {
+  //  runTimerOLED();
+ // }
+//}
+
+void Lab3() {
+  sendData();
+  receiveMessage();
 }
 
+void Lab3_Challenge5() {
+  sendData();
+  receiveMessage();
+}
+
+void Lab3_Challenge6() {
+  receiveMessage();
+  sendData();
+  refreshButton();
+}

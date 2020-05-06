@@ -2,7 +2,6 @@ void setupADC() {
   pinMode(accelZ, INPUT);
   pinMode(accelY, INPUT);
   pinMode(accelX, INPUT);
-  Serial.begin(9600);
 }
 
 void readADC() {
@@ -12,16 +11,17 @@ void readADC() {
 }
 
 void printADC(){ 
- Serial.print("Z:");
- Serial.println(accelZ_Val);
+// Serial.print("Z:");
+ Serial.print(accelZ_Val);
  delay(100);
  Serial.print(",");
- Serial.print("Y:");
- Serial.println(accelY_Val);
+// Serial.print("Y:");
+ Serial.print(accelY_Val);
+ 
  delay(100);
  Serial.print(",");
- Serial.print("X:");
- Serial.println(accelX_Val);
+ //Serial.print("X:");
+ Serial.print(accelX_Val);
+
  delay(100);
 }
-

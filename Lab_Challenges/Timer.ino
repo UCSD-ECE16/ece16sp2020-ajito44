@@ -11,26 +11,27 @@ void runTimerOLED() {
 
 void addTimer() {
   timer_seconds += 1;
-  printTime(timer_seconds);
+//  printTime(timer_seconds);
+  delay(100);
 }
 
 void runTimer() {
   while (timer_seconds > 0) {
     timer_seconds -= 1;
-    printTime(timer_seconds);
-    delay(1000);
+    //printTime(timer_seconds);
+    delay(100);
   }
 }
 
 void Lab2_C2() {
   if (digitalRead(BUTTON_PIN) == LOW) {
     addTimer();
-    int time_1 = millis();
-    delay(1000);
-    Serial.println("Time: ");
-    int time_2 = millis();
-    int yes = time_2 - time_1;
-    Serial.println(yes);
+   // int time_1 = millis();
+   // delay(100);
+   // Serial.println("Time: ");
+   // int time_2 = millis();
+  //  int yes = time_2 - time_1;
+  //  Serial.println(yes);
   }
   else {
     runTimer();
@@ -67,4 +68,3 @@ void stateMachineTimer() {
       }
     }
 }
-

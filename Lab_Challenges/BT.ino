@@ -1,10 +1,17 @@
-/*
+/*#include "BluetoothSerial.h"
+BluetoothSerial SerialBT;
+
+void setupMessage() {
+  
+  SerialBT.begin("Angela_Bluetooth");
+}
+
 char in_text[64];
 int in_text_index = 0;
 
 void receiveMessage() {
-  if(Serial.available() > 0) {
-    char incomingChar = Serial.read();
+  if(SerialBT.available() > 0) {
+    char incomingChar = SerialBT.read();
     if (incomingChar == 10) {
       showMessage(in_text, 1, true);
       checkMessage();
@@ -17,12 +24,10 @@ void receiveMessage() {
     }
   } 
 }
-void setupMessage() {
-  Serial.begin(115200);
-}
+
 
 void printTime(int integer_to_print) {
-  Serial.println(integer_to_print);
+  SerialBT.println(integer_to_print);
 }
 
 int sampling_rate = 50;
@@ -37,13 +42,13 @@ void sendData() {
     if(lastsampletime - last_sample_time > sampling_delay) {
       last_sample_time = micros();
       readADC();
-      Serial.print(last_sample_time);
-      Serial.print(",");
-      Serial.print(accelX_Val);
-      Serial.print(",");
-      Serial.print(accelY_Val);
-      Serial.print(",");
-      Serial.println(accelZ_Val);
+      SerialBT.print(last_sample_time);
+      SerialBT.print(",");
+      SerialBT.print(accelX_Val);
+      SerialBT.print(",");
+      SerialBT.print(accelY_Val);
+      SerialBT.print(",");
+      SerialBT.println(accelZ_Val);
  
     }
   }
@@ -64,4 +69,9 @@ void checkMessage() {
     }
   
 }
+
+
+//void printTime(int seconds) {
+ // SerialBT.println(seconds);
+//}
 */
