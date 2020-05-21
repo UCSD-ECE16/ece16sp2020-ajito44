@@ -5,13 +5,13 @@
 >Q1. Describe the output of the print(scout) statement. 
 
 >A. The output doesn't show the attributes we gave to the dog(name, age, breed).
->[IMAGES](LAB4IMAGES/t11.png)
+>![IMAGES](LAB4IMAGES/t11.png)
 
 >Q2. Show the code and the output: Instantiate an object of class Dog with the following attributes: skippy, 5, Golden Retriever. Did you have to get rid of the previous dog to do it?
 
 >A. No I did not get rid of the previous dog to do it. I added another line of code with variable skippy and added the Dog and attributes to it. I also put the print statements to print out the attributes, and both dogs were able to be printed out.
 
->[IMAGES](LAB4IMAGES/t12.png)
+>![IMAGES](LAB4IMAGES/t12.png)
 
 >Q3. Show the code and the output: Using the method define_buddy() makes scout and skippy buddies. Use the instance scout to print the description of its buddy with the new attribute.
 
@@ -89,11 +89,11 @@
 
 >Deliverable 1: Tune the settings so that you ultimately get a sampling rate of 50Hz. What setting did you land on that gave you a clean signal and at the right sampling rate? Show a gif of you starting your code, and end with the plot appearing. Also include an image of the plot. 
 
->[IMAGES](LAB4IMAGES/c2d1f.gif)
->[IMAGES](LAB4IMAGES/c2d1.png)
+>![IMAGES](LAB4IMAGES/c2d1f.gif)
+>![IMAGES](LAB4IMAGES/c2d1.png)
 >side note: i forgot to record before, so when I recorded this I was already working on Challenge 4 with 500 samples and I used this code so that's why there's a lot :)
 >Deliverable 2: Finally perform the above challenge using the Bluetooth connection you set up in Lab 3. Show a gif of the Python console receiving and plotting the data.
->[IMAGES](LAB4IMAGES/c2d2.gif)
+>![IMAGES](LAB4IMAGES/c2d2.gif)
 
 ## Tutorial 3: PPG Filtering
 
@@ -103,7 +103,7 @@
 
 >Q2. Try using signal_diff(s) to calculate the gradient of the signal s and plot the signal.
 
->A. >[IMAGES](LAB4IMAGES/getdiff.png)
+>A. ![IMAGES](LAB4IMAGES/getdiff.png)
 
 ## Challenge 3: Heart Rate Calculation
 >For this challenge, I recorded ten seconds of data of my heart rate. I found that 200 samples of data is around 10 seconds of data. Then I found the reference by measuring my pulse with my finger, so my I got my resting heart rate to be 60 BPM. Then I created a new file on python to create a code to filter the data and then find the heart rate from that data. From the data plot, I found the threshold to be around 0.5. However, I haven't figured out how to code to get the heart rate so it's not complete.
@@ -118,7 +118,7 @@
 
 >Q3. Show a scatter plot of your heart rate calculation (y-axis) vs the reference (ground truth) heart rate. Calculate the Root Mean Squared Error (RMSE) of your detected heart rate vs the reference heart rate. RMSE is calculated as “the square root of the mean of the square of the difference” between the estimated heart rate and the reference heart rate. More about RMSE can be found here: 
 >A.RSME: 3.79
->[IMAGES](LAB4IMAGES/c3d3.png)
+>![IMAGES](LAB4IMAGES/c3d3.png)
 
 ## Challenge 4: Adding the PPG Class
 > For this challenge, I created two new classes, the ppg.py located in the Libraries Folder, and the Wearable.py located in the Python Folder. For the ppg class, we used moving_average, detrending, normalizing, gradient, and calculating heart rate as attributes to the class. For the Wearable class, we used all the other classes we made: connection, visualization, and ppg. 
@@ -129,9 +129,9 @@
 
 >Q2. Now add a new module in Libraries called PPG.py for the heart rate and signal processing methods we created in this lab. Then in the Wearable.py, complete the code to calculate heart rate and display the heart rate on your OLED. Show in a gif capturing the pulse for 10 seconds, plot the signal, and print out the calculated heart rate on both the console and OLED. 
 
->A.[IMAGES](LAB4IMAGES/c4d.gif)
+>A.![IMAGES](LAB4IMAGES/c4d.gif)
 >My brother's heartrate
 
 >my heartrate
->[IMAGES](LAB4IMAGES/c6.JPG)
->[IMAGES](LAB4IMAGES/c6too.png)
+>![IMAGES](LAB4IMAGES/c6.JPG)
+>![IMAGES](LAB4IMAGES/c6too.png)
