@@ -105,7 +105,7 @@
 >>![IMAGES](LAB5IMAGES/c6code1.png)
 
 >part of my test_hr_model, not completed or right because I can only get the first set of data to be the 2d array I want. I can't exactly figure out how to make it a 2d array.
->>![IMAGES](LAB5IMAGES/c6code2.png)
+>>![IMAGES](LAB5IMAGES/lab6code3.png)
 
 >what i put in wearable
 >>![IMAGES](LAB5IMAGES/wearable.png)
