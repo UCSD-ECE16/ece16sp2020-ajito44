@@ -9,7 +9,7 @@ Created on Tue May 19 19:09:35 2020
 import numpy as np
 import matplotlib.pyplot as plt
 
-data_array_from_file = np.genfromtxt('data_09_096.csv', delimiter=',')
+data_array_from_file = np.genfromtxt('02_0_096.csv', delimiter=',')
 signal = data_array_from_file[:,4]
 
 def baseline(signal):

@@ -28,7 +28,7 @@ def main():
     connect.setup_connection()
     hundred()
     data_array = connect.data_array
-    np.savetxt("challenge2.csv", data_array, delimiter=",")
+    np.savetxt("hello.csv", data_array, delimiter=",")
     connect.calc_sampling_rate()
     plot = Visualization(data_array)
     plot.plotData()

@@ -52,3 +52,15 @@ class Visualization:
       plt.ylabel("HR")
       plt.show()
     # plot the heartbeat pulse data (covered later on in this lab)
+    
+  def plot_pedometer(self, signal, peaks = None):
+    plt.clf()
+    plt.subplot(211)
+    plt.plot(self.time, signal)
+    plt.subplot(212)
+    plt.psd(signal, NFFT = len(self.time), Fs=50)
+    plt.show()
+    if not peaks is None:
+        plt.plot(signal)
+        plt.plot(peaks,signal[peaks.astype(int)],'rx')
+        plt.show()
