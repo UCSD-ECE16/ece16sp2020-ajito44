@@ -78,7 +78,7 @@ class Wearable:
         
 def main():
     wearable = Wearable('/dev/cu.Angela_Bluetooth-ESP32S', 115200)
-    #wearable.run()
+    wearable.run()
     lab5()
         
 if __name__ == "__main__":

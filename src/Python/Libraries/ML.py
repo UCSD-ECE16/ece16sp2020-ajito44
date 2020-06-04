@@ -91,12 +91,11 @@ class ML:
      def test_hr_model(self,directory): 
          testhr = []
          self.sorted_data(directory)
-         for i in range(len(self.unique_ids)):   
-             self.train_hr_model(directory, i)
-             self.calc_hr(self.test_pred, 50)
-             testhr.append(self.hr)
-             testhr.append(self.list_ref[i*10:i*10+10])
-             print(np.shape(testhr))
+         self.train_hr_model(directory, 2)
+         self.calc_hr(self.test_pred, 50)
+         testhr.append(self.hr)
+         testhr.append(self.list_ref[2*10:2*10+10])
+         print(np.shape(testhr))
          return testhr
      
 def main():
