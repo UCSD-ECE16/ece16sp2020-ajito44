@@ -39,19 +39,36 @@ class Connection:
     # send 'Start Data\n' through Serial
 
   def receive_data(self, input_char):
+      
+       # 1. Define maxlen to 500
+       maxlen = 500
+       for i in range(len(self.data_array)):
+           if i == maxlen:
+               self.data_array[:-500] = self.data_array[500:]
+               self.data_array[-500:] = self.data_array[500:]
+           if i != maxlen:
+               np.append(self.data_array)
+       return
+
+       # 2. Check if buffer (data_array) is full by checking that the length is equal to maxlen
+            # 2.1. If the buffer (data_array) is full, shift the buffer up by one row
+            # 2.2. Assign the last row of the data buffer with the new data row
+        # 3. If the buffer is not full, simply append the new data to the buffer (data_array)
+        # 4. Return nothing
+
     
-      if( input_char == '\n' ):
-        data_string = ''.join(self.string_buffer) 
-        print(data_string)
-        np_buffer = np.fromstring(data_string, sep = ',')
-        print(self.data_array.shape, np_buffer.shape)
-        if(self.data_array.size == 0 ):
-            self.data_array = np_buffer
-        else:
-            self.data_array = np.vstack((self.data_array, np_buffer)) 
-        self.string_buffer = [] 
-      else:
-          self.string_buffer.append(input_char)
+      #if( input_char == '\n' ):
+       # data_string = ''.join(self.string_buffer) 
+       # print(data_string)
+       # np_buffer = np.fromstring(data_string, sep = ',')
+       # print(self.data_array.shape, np_buffer.shape)
+       # if(self.data_array.size == 0 ):
+        #    self.data_array = np_buffer
+        #else:
+        #    self.data_array = np.vstack((self.data_array, np_buffer)) 
+        #self.string_buffer = [] 
+      #else:
+       #   self.string_buffer.append(input_char)
     # This should have the same functionality as parse_input from Lab 3, but use the class
     # attributes defined above instead of global variables like you used in Lab 3
 

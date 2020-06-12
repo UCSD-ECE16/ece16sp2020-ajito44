@@ -22,11 +22,11 @@ class PPG:
     def moving_average(self, sig, n_avg): 
         ma = np.zeros(sig.size)
         for i in np.arange(0,len(sig)):
-            ma[i] = np.mean(sig)
+            ma[i] = np.mean(sig[i:i+n_avg])
         return ma
     
     def detrend(self, trend, n_avg):
-        ma = self.moving_average(trend,15)
+        ma = self.moving_average(trend,10)
         trend = trend - ma
         return trend
     

@@ -71,15 +71,19 @@ class Wearable:
         
     def lab5(self):
          directory = "/Users/joyceeito/Downloads/SPring2020/ece16sp2020-ajito44/src/Python/Data_Lab5_ML/Training/"
+         testing = "/Users/joyceeito/Downloads/SPring2020/ece16sp2020-ajito44/src/Python/Data_Lab5_ML/Testing/"
          x = ML()
-         y = x.test_hr_model(directory)
+         x.train_hr_model(directory)
+         y,z = x.test_hr_model(testing)
          print(y)
+         print(z)
         
         
 def main():
     wearable = Wearable('/dev/cu.Angela_Bluetooth-ESP32S', 115200)
-    wearable.run()
-    lab5()
+    #wearable.run()
+    wearable.lab5()
+    
         
 if __name__ == "__main__":
     main()
